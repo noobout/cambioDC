@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/pricedown" rel="stylesheet">
+    <title>Cambio</title>
+    <style>
+    @import url('https://fonts.cdnfonts.com/css/pricedown');
+    </style>
+</head>
+<body>
+    <main>
+        <div class="divMain">
+
+            <div class="imgMain">
+                <img class="moneyLogo" src="./assets/dollarlogo.gif" alt="gif dinheiro">
+            </div>
+
+            <div class="conteudoMain">
+                <label>
+                    Converter de:
+                    <select class="convertDe">
+                        <option value="" disabled selected>Selecione uma moeda...</option>
+                        <option value="real">R$ Real</option>
+                        <option value="dolar">US$ Dólar americano</option>
+                        <option value="euro">€ Euro</option>
+                        <option value="libras">£ Libras</option>
+                        <option value="bitcoin">₿ Bitcoin</option>
+                    </select>
+
+                    Converter para:
+                    <select class="convertPara">
+                        <option value="" disabled selected>Selecione uma moeda...</option>
+                        <option value="real">R$ Real</option>
+                        <option value="dolar">US$ Dólar americano</option>
+                        <option value="euro">€ Euro</option>
+                        <option value="libras">£ Libras</option>
+                        <option value="bitcoin">₿ Bitcoin</option>
+                    </select>
+                </label>
+
+                <label>
+                    Valor:
+                    <input class="input-currency" placeholder="Digite o Valor">
+                </label>
+
+                <div class="mensagemErro"></div>
+
+                <button id="convertButton" type="buttom" onclick="abrirCambio()">Converter</button>
+
+                <section class="box-cambio" id="boxCambio">
+                    <div class="boxEntrada">
+                        <img class="moeda1" src="./assets/real.png" alt="logo-moeda-real">
+                        <p>Real</p>
+                        <p class="pValor">R$ 0,00</p>
+                    </div>
+
+                    <img class="arrow" src="./assets/arrow2.png" alt="seta-para-direita">
+
+                    <div class="boxSAida">
+                        <img class="moeda2" src="./assets/dollar.png" alt="logo-moeda-dólar">
+                        <p class="currencyName">Dólar</p>
+                        <p class="pValorSaida">US$ 0,00</p>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+<script src="script.js" ></script>
+
+</html>

@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 4px rgba(49, 49, 49, 0.288);
+}
+
+body {
+    background-color: #6f8f72;
+    
+}
+
+main {
+    height: 100vh;
+    font-family: 'Pricedown Bl', sans-serif;
+    font-size: 30px;                             
+}
+
+.divMain {
+    display: flex;
+    height: 100vh;
+    
+}
+
+.imgMain {
+    background-image: url("./assets/fundoDivImgMain.jpg");
+    background-size: cover;
+    width: 50%;
+    background-color: #6f8f72;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.imgMain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.08),
+        transparent 50%
+    );
+    pointer-events: none;
+}
+
+.moneyLogo {
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    z-index: 1;
+
+    filter: drop-shadow(6px 8px 0px #d0b878);
+}
+
+.conteudoMain {
+    width: 50%;
+    background-color: #294b4a;
+    text-align: center;
+    padding: 40px;
+
+    border-left: 8px solid #b49a68;
+
+    box-shadow: inset 8px 0px 0px rgba(20, 28, 27, 0.25);
+}
+
+label {
+    color: #f0e4c4;
+    display: grid;
+    justify-items: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+input {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+
+    text-align: center;
+
+    background-color: #eee3c8;
+    color: #29322f;
+
+    padding: 12px 20px;
+
+    border: 3px solid #b49a68;
+    border-radius: 4px;
+
+    margin: 10px 0 20px;
+
+    outline: none;
+
+    box-shadow:
+        4px 4px 0px rgba(20, 25, 23, 0.3);
+
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #d0b878;
+    box-shadow:
+        0 0 0 2px rgba(208, 184, 120, 0.25),
+        4px 4px 0px rgba(20, 25, 23, 0.3);
+}
+
+select {
+    width: 100%;
+    max-width: 350px;
+
+    padding: 12px 20px;
+
+    background-color: #eee3c8;
+    color: #29322f;
+
+    border: 3px solid #b49a68;
+    border-radius: 4px;
+
+    margin: 10px 0 20px;
+
+    outline: none;
+
+    box-shadow:
+        4px 4px 0px rgba(20, 25, 23, 0.3);
+
+    font-size: 16px;
+}
+
+select:focus {
+    border-color: #d0b878;
+}
+
+.pValor, .pValorSaida {
+    margin-bottom: 20px;
+    color: #f0e4c4;
+}
+
+.moeda1, .moeda2 {
+    width: 40px;
+    margin: 20px auto 5px;
+
+    filter: drop-shadow(
+        3px 3px 0px rgba(20, 25, 23, 0.35)
+    );
+}
+
+.mensagemErro {
+    color: #f0e4c4;
+    animation: piscar 1.5s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.box-cambio {
+    color: #f0e4c4;
+
+    margin: 20px;
+
+    background-color: #1e302f;
+
+    border: 3px dashed #b49a68;
+
+    border-radius: 6px;
+
+    padding: 20px;
+
+    box-shadow:
+        6px 6px 0px rgba(20, 25, 23, 0.3);
+
+    position: relative;
+    display: none;
+    justify-content: center;
+}
+
+.box-cambio.ativa{
+    display: flex;
+}
+
+.arrow {
+    margin: auto 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.box-cambio::before {
+    content: "EXCHANGE";
+    position: absolute;
+    
+    border: 3px outset #b49a68;
+    box-shadow:
+        6px 6px 0px rgba(20, 25, 23, 0.3);
+    top: -28px;
+    left: 20px;
+
+    background-color: #294b4a;
+
+    padding: 3px 10px;
+
+    color: #c5aa72;
+
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+#convertButton {
+    color: #29322f;
+    font-family: 'Pricedown Bl', sans-serif;
+    font-size: 30px; 
+    background-color: #c5aa72;
+
+    padding: 12px 70px;
+
+    border: 3px solid #9a8150;
+    border-radius: 4px;
+
+    margin: 20px;
+
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        5px 5px 0px rgba(20, 25, 23, 0.35);
+
+    transition: 0.15s ease;
+}
+
+#button-submit:hover {
+    background-color: #d4bd8b;
+
+    transform: translate(
+        2px,
+        2px
+    );
+
+    box-shadow:
+        3px 3px 0px rgba(20, 25, 23, 0.35);
+}
+
+#button-submit:active {
+    transform: translate(
+        5px,
+        5px
+    );
+
+    box-shadow: none;
+}
